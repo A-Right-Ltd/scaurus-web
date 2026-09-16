@@ -367,8 +367,19 @@
     @apply border-border;
   }
 
+  html {
+    scroll-padding-top: 5rem;
+  }
+
   body {
     @apply font-sans antialiased bg-background text-foreground;
+  }
+}
+
+@layer components {
+  /* Shared page gutter: header + landing sections must use the same box. */
+  .scaurus-shell {
+    @apply mx-auto w-full max-w-7xl px-6 lg:px-8;
   }
 }
 

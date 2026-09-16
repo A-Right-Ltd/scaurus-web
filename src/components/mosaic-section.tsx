@@ -278,7 +278,8 @@ export default function MosaicSection() {
           />
         </div>
 
-        <div className="relative z-10 max-w-4xl mx-auto px-6 py-32 md:py-48 text-center">
+        <div className="relative z-10 scaurus-shell py-32 md:py-48 text-center">
+          <div className="mx-auto max-w-4xl">
           <Reveal>
             <SectionLabel>The Mosaic</SectionLabel>
             <h2 className="text-4xl md:text-6xl font-extrabold tracking-tight leading-[1.04]">
@@ -326,12 +327,13 @@ export default function MosaicSection() {
               Start building your mosaic →
             </a>
           </Reveal>
+          </div>
         </div>
       </div>
 
       {/* ── States of Brand Success ── */}
-      <div className="relative z-10 border-t border-[#2a2a2a] bg-[#050505] py-24 md:py-32 px-6">
-        <div className="max-w-6xl mx-auto">
+      <div className="relative z-10 border-t border-[#2a2a2a] bg-[#050505] py-24 md:py-32">
+        <div className="scaurus-shell">
           <Reveal className="max-w-3xl mb-14">
             <SectionLabel>States of Brand Success</SectionLabel>
             <h3 className="text-3xl md:text-4xl font-extrabold tracking-tight leading-[1.1]">

@@ -103,7 +103,7 @@ export default function ThreeEnginesIntro() {
       aria-label="SCAURUS intro — three engines, one source of truth"
     >
       {/* ── Cinematic intro panel ── */}
-      <div className="relative min-h-[70vh] md:min-h-[80vh] flex flex-col items-center justify-center px-6 py-24">
+      <div className="relative flex min-h-[70vh] flex-col items-center justify-center px-6 py-24 md:min-h-[80vh] lg:px-8">
         <ParticleField />
 
         {/* Play intro pill — top centre */}
@@ -157,8 +157,8 @@ export default function ThreeEnginesIntro() {
       </div>
 
       {/* ── The three engines resolve into cards ── */}
-      <div className="relative px-6 pb-28 md:pb-36">
-        <div ref={cardsRef} className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div className="relative pb-28 md:pb-36">
+        <div ref={cardsRef} className="scaurus-shell grid grid-cols-1 gap-6 md:grid-cols-3">
           {ENGINES.map((e, i) => (
             <a
               key={e.letter}

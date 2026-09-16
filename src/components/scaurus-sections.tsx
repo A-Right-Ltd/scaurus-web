@@ -271,8 +271,8 @@ export default function ScaurusSections() {
   return (
     <div style={{ fontFamily: BRAND_FONT }} className="bg-[#0a0a0a] text-[#f5f5f5]">
       {/* ── SCAURUS QUANT ── */}
-      <section id="quant" className="py-28 md:py-36 px-6 border-t border-[#2a2a2a]">
-        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
+      <section id="quant" className="py-28 md:py-36 border-t border-[#2a2a2a]">
+        <div className="scaurus-shell grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
           <Reveal>
             <SectionLabel>SCAURUS Quant</SectionLabel>
             <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight mb-6 leading-[1.1]">
@@ -313,8 +313,8 @@ export default function ScaurusSections() {
       </section>
 
       {/* ── INSIDE THE ENGINE — SIX PRODUCT CARDS ── */}
-      <section className="py-28 md:py-36 px-6 border-t border-[#2a2a2a]">
-        <div className="max-w-6xl mx-auto">
+      <section className="py-28 md:py-36 border-t border-[#2a2a2a]">
+        <div className="scaurus-shell">
           <Reveal className="text-center max-w-2xl mx-auto mb-16">
             <SectionLabel>Inside the engine</SectionLabel>
             <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight mb-6 leading-[1.1]">
@@ -345,8 +345,8 @@ export default function ScaurusSections() {
       <RedTeamEngine />
 
       {/* ── THE LANDSCAPE — COMPARISON ── */}
-      <section className="py-28 md:py-36 px-6 bg-[#050505] border-t border-[#2a2a2a]">
-        <div className="max-w-5xl mx-auto">
+      <section className="py-28 md:py-36 bg-[#050505] border-t border-[#2a2a2a]">
+        <div className="scaurus-shell">
           <Reveal>
             <SectionLabel>The landscape</SectionLabel>
             <h2 className="text-2xl md:text-4xl font-extrabold tracking-tight mb-10 max-w-3xl">
@@ -387,8 +387,8 @@ export default function ScaurusSections() {
       </section>
 
       {/* ── ON THE SYSTEMS YOU ALREADY RUN ── */}
-      <section className="py-28 md:py-32 px-6 bg-[#0e0e0e] border-t border-[#2a2a2a]">
-        <Reveal className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-start">
+      <section className="py-28 md:py-32 bg-[#0e0e0e] border-t border-[#2a2a2a]">
+        <Reveal className="scaurus-shell grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-start">
           <div>
             <SectionLabel>On the systems you already run</SectionLabel>
             <blockquote className="text-2xl md:text-4xl font-extrabold tracking-tight leading-snug">
@@ -413,8 +413,8 @@ export default function ScaurusSections() {
       </section>
 
       {/* ── SCAURUS DIGITAL ── */}
-      <section id="digital" className="py-28 md:py-36 px-6 border-t border-[#2a2a2a]">
-        <div className="max-w-6xl mx-auto">
+      <section id="digital" className="py-28 md:py-36 border-t border-[#2a2a2a]">
+        <div className="scaurus-shell">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
           <Reveal>
             <SectionLabel>SCAURUS Digital</SectionLabel>
@@ -639,8 +639,8 @@ export default function ScaurusSections() {
       </section>
 
       {/* ── SCAURUS PRO ── */}
-      <section id="pro" className="py-28 md:py-36 px-6 bg-[#050505] border-t border-[#2a2a2a]">
-        <div className="max-w-6xl mx-auto">
+      <section id="pro" className="py-28 md:py-36 bg-[#050505] border-t border-[#2a2a2a]">
+        <div className="scaurus-shell">
           <Reveal className="max-w-3xl mb-16">
             <SectionLabel>SCAURUS Pro</SectionLabel>
             <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight mb-6 leading-[1.1]">
@@ -769,8 +769,8 @@ export default function ScaurusSections() {
       <MosaicSection />
 
       {/* ── FAQ ── */}
-      <section id="faq" className="py-28 md:py-36 px-6 border-t border-[#2a2a2a]">
-        <div className="max-w-3xl mx-auto">
+      <section id="faq" className="py-28 md:py-36 border-t border-[#2a2a2a]">
+        <div className="scaurus-shell">
           <Reveal className="mb-14">
             <SectionLabel>Questions, answered</SectionLabel>
             <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight leading-[1.1]">

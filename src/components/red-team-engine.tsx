@@ -161,12 +161,12 @@ export default function RedTeamEngine() {
     <section
       ref={ref}
       id="engine"
-      className="py-28 md:py-36 px-6 border-t border-[#2a2a2a] bg-[#070707] relative overflow-hidden"
+      className="py-28 md:py-36 border-t border-[#2a2a2a] bg-[#070707] relative overflow-hidden"
       style={{ fontFamily: BRAND_FONT }}
     >
       <style dangerouslySetInnerHTML={{ __html: KEYFRAMES }} />
 
-      <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      <div className="scaurus-shell grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
         {/* ── Narrative ── */}
         <div
           className={`transition-all duration-1000 ease-out ${
@@ -346,7 +346,7 @@ export default function RedTeamEngine() {
       </div>
 
       {/* ── Attack vectors ── */}
-      <div className="max-w-6xl mx-auto mt-20">
+      <div className="scaurus-shell mt-20">
         <p
           className={`text-[11px] font-bold uppercase mb-6 transition-opacity duration-1000 ${
             inView ? "opacity-100" : "opacity-0"

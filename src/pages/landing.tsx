@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 import { Target, Mic, ArrowRight, Calendar } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import AgentSwarmCanvas from "@/components/agent-swarm-canvas";
@@ -45,7 +45,7 @@ export default function LandingPage() {
   }, []);
 
   useEffect(() => {
-    if (!isVisible) return;
+    if (!isVisible || showDemoForm) return;
 
     let phraseIndex = 0;
     let charIndex = 0;
@@ -91,7 +91,9 @@ export default function LandingPage() {
       clearTimeout(timeout);
       clearInterval(cursorInterval);
     };
-  }, [isVisible]);
+  }, [isVisible, showDemoForm]);
+
+  const closeDemoForm = useCallback(() => setShowDemoForm(false), []);
 
   const handleBarClick = () => {
     setFormMode("demo");
@@ -101,12 +103,13 @@ export default function LandingPage() {
   return (
     <div className="relative w-full overflow-x-hidden bg-background">
       <main>
-      <section className="relative min-h-screen w-full overflow-hidden flex flex-col items-center justify-center bg-[#0a0a0a]">
+      <section className="relative flex min-h-[calc(100dvh-4rem)] w-full flex-col items-center justify-center overflow-hidden bg-[#0a0a0a] py-10">
         <div className="absolute inset-0 opacity-[0.03]">
           <AgentSwarmCanvas brandLetter="S" />
         </div>
 
-        <div className="relative z-20 flex flex-col items-center text-center px-6 max-w-3xl w-full">
+        <div className="scaurus-shell relative z-20 flex flex-col items-center text-center">
+          <div className="w-full max-w-4xl">
           <div
             id="logo-container"
             className={`relative mb-8 transition-all duration-1000 ${isVisible ? "opacity-100" : "opacity-0 translate-y-8"}`}
@@ -183,12 +186,13 @@ export default function LandingPage() {
             </div>
           </div>
         </div>
+        </div>
       </section>
 
       <ThreeEnginesIntro />
 
       <section className="relative bg-gradient-to-b from-[#111113] via-[#1a1a1a] to-[#111113] text-white overflow-hidden py-28 md:py-36">
-        <div ref={showcase.ref} className={`max-w-6xl mx-auto px-6 transition-all duration-1000 relative z-10 ${showcase.isRevealed ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"}`}>
+        <div ref={showcase.ref} className={`scaurus-shell relative z-10 transition-all duration-1000 ${showcase.isRevealed ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"}`}>
           <div className="text-center mb-16">
             <p className="text-[11px] tracking-[0.35em] uppercase text-neutral-500 font-medium mb-6">Inside SCAURUS Quant</p>
             <h2
@@ -212,7 +216,8 @@ export default function LandingPage() {
       </main>
 
       <footer className="bg-[#0a0a0a] text-[#f5f5f5] py-28 md:py-36 border-t border-[#2a2a2a]" style={{ fontFamily: BRAND_FONT }}>
-        <div ref={finalCta.ref} className={`max-w-3xl mx-auto px-6 text-center transition-all duration-1000 ${finalCta.isRevealed ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"}`}>
+        <div ref={finalCta.ref} className={`scaurus-shell transition-all duration-1000 ${finalCta.isRevealed ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"}`}>
+          <div className="mx-auto max-w-3xl text-center">
           <div className="flex justify-center mb-8">
             <ScaurusMark size={48} dark />
           </div>
@@ -251,13 +256,14 @@ export default function LandingPage() {
           <p className="text-[#555] text-xs mt-12">
             &copy; 2026 A Right Ltd.
           </p>
+          </div>
         </div>
       </footer>
 
       <LeadCaptureModal
         open={showDemoForm}
         mode={formMode}
-        onClose={() => setShowDemoForm(false)}
+        onClose={closeDemoForm}
       />
     </div>
   );
