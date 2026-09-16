@@ -7,8 +7,7 @@ import ScaurusSections from "@/components/scaurus-sections";
 import ThreeEnginesIntro from "@/components/three-engines-intro";
 import { ScaurusMark } from "@/components/scaurus-logos";
 import LeadCaptureModal from "@/components/lead-capture-modal";
-
-const BRAND_FONT = "'Outfit', sans-serif";
+import { BRAND_FONT, SCAURUS_ACCENT } from "@/lib/brand-tokens";
 
 const PHRASES = ["AI first for IP"];
 
@@ -100,17 +99,7 @@ export default function LandingPage() {
   };
 
   return (
-    <div className="relative w-full overflow-x-hidden bg-white">
-      <div className="absolute top-6 right-6 z-50 flex items-center gap-2">
-        <a
-          href="/quant/login"
-          className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-white/70 hover:text-white bg-white/10 backdrop-blur-sm rounded-full border border-white/15 hover:border-white/30 transition-all duration-200"
-          data-testid="link-quant-login"
-        >
-          Login
-        </a>
-      </div>
-
+    <div className="relative w-full overflow-x-hidden bg-background">
       <main>
       <section className="relative min-h-screen w-full overflow-hidden flex flex-col items-center justify-center bg-[#0a0a0a]">
         <div className="absolute inset-0 opacity-[0.03]">
@@ -133,7 +122,7 @@ export default function LandingPage() {
                   SCAURUS
                 </span>
               </div>
-              <p className="text-[10px] tracking-[0.25em] uppercase font-medium" style={{ color: "oklch(0.6 0.2 250)" }}>The operating layer for intellectual property</p>
+              <p className="text-[10px] tracking-[0.25em] uppercase font-medium" style={{ color: SCAURUS_ACCENT }}>The operating layer for intellectual property</p>
             </div>
           </div>
 
@@ -175,7 +164,7 @@ export default function LandingPage() {
 
                   <div className="flex items-center gap-2 flex-shrink-0">
                     <Mic className="w-5 h-5 text-neutral-500" />
-                    <div className="w-9 h-9 rounded-full flex items-center justify-center" style={{ backgroundColor: "oklch(0.6 0.2 250)" }}>
+                    <div className="w-9 h-9 rounded-full flex items-center justify-center" style={{ backgroundColor: SCAURUS_ACCENT }}>
                       <ArrowRight className="w-4 h-4 text-white" />
                     </div>
                   </div>
@@ -252,7 +241,7 @@ export default function LandingPage() {
               Book a Demo
             </Button>
             <a
-              href="/quant/login"
+              href="/login"
               className="inline-flex items-center justify-center px-6 py-3 border border-[#2a2a2a] text-[#f5f5f5] font-semibold rounded-xl hover:bg-[#1a1a1a] transition-colors text-sm"
               data-testid="button-final-cta-signin"
             >

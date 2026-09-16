@@ -2,9 +2,7 @@ import { useEffect, useRef, useState, type ReactNode, type ComponentType, type C
 import { BarChart3, ShieldAlert, Search, PoundSterling, Building2 } from "lucide-react";
 import RedTeamEngine from "@/components/red-team-engine";
 import MosaicSection from "@/components/mosaic-section";
-
-const BRAND_FONT = "'Outfit', sans-serif";
-const COBALT = "oklch(0.6 0.2 250)";
+import { BRAND_FONT, SCAURUS_ACCENT as COBALT } from "@/lib/brand-tokens";
 
 function Reveal({
   children,
@@ -145,7 +143,7 @@ const FAQ_ITEMS = [
   },
   {
     q: "What is Sonar brand valuation?",
-    a: "Sonar is Quant's continuous brand valuation engine. It applies the Relief-from-Royalty method (ISO 10668-aligned) to every mark in your portfolio — producing a defensible valuation figure without a consultant, without a 6-week engagement, and without a £50,000+ invoice. The output updates automatically when your portfolio or market data changes.",
+    a: "Sonar is Quant's continuous brand valuation engine. It applies Relief-from-Royalty as indicative brand intelligence to every mark in your portfolio — producing a figure without a consultant, without a 6-week engagement, and without a £50,000+ invoice. The output updates automatically when your portfolio or market data changes.",
   },
   {
     q: "What does Quant actually replace?",
@@ -287,7 +285,7 @@ export default function ScaurusSections() {
               Quant complements your docketing system. Then, in most cases, it replaces the manual work that sits around it.
             </p>
             <a
-              href="/quant/login"
+              href="/login"
               data-testid="link-access-quant"
               className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-[#f5f5f5] text-[#0a0a0a] font-semibold text-sm hover:bg-white transition-colors"
             >
@@ -648,6 +646,9 @@ export default function ScaurusSections() {
             <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight mb-6 leading-[1.1]">
               The AI IP Operating System for professionals.
             </h2>
+            <p className="text-[#888] text-base leading-relaxed mb-4">
+              The attorney toolkit — clearance, specification, and filing intelligence in one place.
+            </p>
             <p className="text-[#888] text-base leading-relaxed">
               Not a filing tool. Not a case law database. Not an IP management system. Not a blockchain toolkit. All five — unified on a single data lake, running under one session, producing cited outputs that meet professional indemnity standards.
             </p>
@@ -752,7 +753,7 @@ export default function ScaurusSections() {
                   </p>
                 </div>
                 <a
-                  href="/quant/login"
+                  href="/login"
                   data-testid="link-pro-firms-demo"
                   className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-[#f5f5f5] text-[#0a0a0a] font-semibold text-sm hover:bg-white transition-colors flex-shrink-0"
                 >

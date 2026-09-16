@@ -1,7 +1,5 @@
 import { useEffect, useRef, useState, type ReactNode } from "react";
-
-const BRAND_FONT = "'Outfit', sans-serif";
-const COBALT = "oklch(0.6 0.2 250)";
+import { BRAND_FONT, SCAURUS_ACCENT as COBALT } from "@/lib/brand-tokens";
 
 /* ── Reveal-on-scroll helper (self-contained) ─────────────────── */
 function Reveal({
@@ -321,7 +319,7 @@ export default function MosaicSection() {
             </div>
 
             <a
-              href="/quant/login"
+              href="/login"
               data-testid="link-build-mosaic"
               className="mt-11 inline-flex items-center gap-2 px-7 py-3.5 rounded-xl bg-[#f5f5f5] text-[#0a0a0a] font-semibold text-sm hover:bg-white transition-colors"
             >

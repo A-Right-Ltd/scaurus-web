@@ -1,11 +1,24 @@
 import { QueryClientProvider } from "@tanstack/react-query";
 import { queryClient } from "./lib/queryClient";
+import { ThemeProvider } from "./lib/theme-provider";
+import { Route, RouterProvider, Switch } from "./lib/router";
+import { SiteHeader } from "./components/site-header";
 import LandingPage from "@/pages/landing";
 
 export default function App() {
   return (
-    <QueryClientProvider client={queryClient}>
-      <LandingPage />
-    </QueryClientProvider>
+    <ThemeProvider>
+      <QueryClientProvider client={queryClient}>
+        <RouterProvider>
+          <div className="min-h-screen bg-background text-foreground">
+            <SiteHeader />
+            <Switch>
+              <Route path="/" component={LandingPage} />
+              <Route component={LandingPage} />
+            </Switch>
+          </div>
+        </RouterProvider>
+      </QueryClientProvider>
+    </ThemeProvider>
   );
 }
