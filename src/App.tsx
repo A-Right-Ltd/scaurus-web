@@ -4,6 +4,7 @@ import { ThemeProvider } from "./lib/theme-provider";
 import { Route, RouterProvider, Switch } from "./lib/router";
 import { SiteHeader } from "./components/site-header";
 import LandingPage from "@/pages/landing";
+import IntelligencePage from "@/pages/intelligence";
 
 export default function App() {
   return (
@@ -13,6 +14,8 @@ export default function App() {
           <div className="min-h-screen bg-background text-foreground">
             <SiteHeader />
             <Switch>
+              <Route path="/intelligence/:slug" component={IntelligencePage} />
+              <Route path="/intelligence" component={IntelligencePage} />
               <Route path="/" component={LandingPage} />
               <Route component={LandingPage} />
             </Switch>
