@@ -1,0 +1,17 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "rewrites": [
+    {
+      "source": "/api/quant/(.*)",
+      "destination": "https://web-api-prod-production.up.railway.app/api/$1"
+    },
+    {
+      "source": "/quant",
+      "destination": "https://aittorney-quant-web-aittorney.vercel.app/quant"
+    },
+    {
+      "source": "/quant/(.*)",
+      "destination": "https://aittorney-quant-web-aittorney.vercel.app/quant/$1"
+    }
+  ]
+}
