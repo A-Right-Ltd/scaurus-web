@@ -3,6 +3,7 @@ import { queryClient } from "./lib/queryClient";
 import { ThemeProvider } from "./lib/theme-provider";
 import { Route, RouterProvider, Switch } from "./lib/router";
 import { SiteHeader } from "./components/site-header";
+import { DispatchWidget } from "./components/dispatch-widget";
 import LandingPage from "@/pages/landing";
 import IntelligencePage from "@/pages/intelligence";
 
@@ -19,6 +20,7 @@ export default function App() {
               <Route path="/" component={LandingPage} />
               <Route component={LandingPage} />
             </Switch>
+            <DispatchWidget />
           </div>
         </RouterProvider>
       </QueryClientProvider>
