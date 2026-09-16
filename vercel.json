@@ -1,5 +1,12 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
+  "redirects": [
+    {
+      "source": "/login",
+      "destination": "/quant/login",
+      "permanent": false
+    }
+  ],
   "rewrites": [
     {
       "source": "/api/quant/(.*)",
@@ -12,6 +19,10 @@
     {
       "source": "/quant/(.*)",
       "destination": "https://aittorney-quant-web-aittorney.vercel.app/quant/$1"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
     }
   ]
 }

@@ -1,8 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { Crosshair, Radar, ShieldAlert, GitBranch } from "lucide-react";
-
-const BRAND_FONT = "'Outfit', sans-serif";
-const COBALT = "oklch(0.6 0.2 250)";
+import { BRAND_FONT, SCAURUS_ACCENT as COBALT } from "@/lib/brand-tokens";
 
 const KEYFRAMES = `
 @keyframes rtx-scan {

@@ -1,6 +1,7 @@
 import { defineConfig, loadEnv } from "vite";
 import react from "@vitejs/plugin-react";
 import path from "path";
+import { loginRedirectPlugin } from "./vite-login-redirect";
 
 const DEFAULT_API_URL = "http://localhost:5001";
 
@@ -10,7 +11,7 @@ export default defineConfig(({ mode }) => {
   const QUANT_TARGET = process.env.VITE_QUANT_ORIGIN || env.VITE_QUANT_ORIGIN || "http://localhost:5173";
 
   return {
-    plugins: [react()],
+    plugins: [react(), loginRedirectPlugin()],
     base: "/",
     resolve: {
       alias: {

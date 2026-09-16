@@ -1,9 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { Play } from "lucide-react";
 import { HexMark } from "@/components/scaurus-logos";
-
-const BRAND_FONT = "'Outfit', sans-serif";
-const COBALT = "oklch(0.6 0.2 250)";
+import { BRAND_FONT, SCAURUS_ACCENT as COBALT } from "@/lib/brand-tokens";
 
 const ENGINES = [
   {
